@@ -13,6 +13,7 @@ public partial class Main : Control
 	Button playAgain;
 	
 	// Dependant Variables
+	Random rand = new Random();	
 	int randomNumber;
 	int guess;
 	int numberOfGuesses = 0;
@@ -27,7 +28,6 @@ public partial class Main : Control
 		guessAgain = GetNode<Button>("./GuessAgain");
 		playAgain = GetNode<Button>("./PlayAgain");
 		
-		Random rand = new Random();
 		randomNumber = rand.Next(1,100);
 		
 		GD.Print("Nodes Loaded!");
@@ -84,5 +84,10 @@ public partial class Main : Control
 		numberOfGuessesHolder.Text = "";
 		playAgain.Disabled = true;
 		playAgain.Modulate = new Color(1,1,1,0);
+		randomNumberHolder.Text = "?";
+		numberOfGuesses = 0;
+		numberOfGuessesHolder.Text = "0";
+		guessHolder.Editable = true;
+		randomNumber = rand.Next(1,100);
 	}	
 }
