@@ -1,0 +1,199 @@
+[gd_scene load_steps=10 format=3 uid="uid://yrx3h84pw0g3"]
+
+[ext_resource type="Script" path="res://Main.cs" id="1_h03bj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rdpb6"]
+font_size = 40
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tjdx1"]
+font_size = 40
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_6vph5"]
+default_font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_5kja1"]
+font_size = 80
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_84byd"]
+font_size = 40
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ocigp"]
+font_size = 50
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6jd3s"]
+font_size = 50
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_572ew"]
+font_size = 40
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h03bj")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.211765, 0.141176, 1, 1)
+
+[node name="PlayerGuess" type="Label" parent="."]
+layout_mode = 0
+offset_left = 733.0
+offset_top = 346.0
+offset_right = 1053.0
+offset_bottom = 462.0
+text = "Guess A Number
+Between 1-100"
+label_settings = SubResource("LabelSettings_rdpb6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RandomNumber" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 227.0
+offset_top = -109.0
+offset_right = 557.0
+offset_bottom = -51.0
+grow_vertical = 2
+text = "Random Number"
+label_settings = SubResource("LabelSettings_tjdx1")
+
+[node name="GuessHolder" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.513
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 80.0
+offset_bottom = 52.364
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_6vph5")
+placeholder_text = "000"
+drag_and_drop_selection_enabled = false
+middle_mouse_paste_enabled = false
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -369.0
+offset_top = 143.0
+offset_right = 369.0
+offset_bottom = 256.0
+grow_horizontal = 2
+text = "Guess The Number"
+label_settings = SubResource("LabelSettings_5kja1")
+
+[node name="NumberOfGuesses" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -495.0
+offset_top = -626.0
+offset_right = -287.0
+offset_bottom = -510.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Number of 
+Guesses"
+label_settings = SubResource("LabelSettings_84byd")
+horizontal_alignment = 1
+
+[node name="RandomNumberHolder" type="Label" parent="."]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 462.0
+offset_right = 412.0
+offset_bottom = 507.0
+text = "?"
+label_settings = SubResource("LabelSettings_ocigp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NumberOfGuessesHolder" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1322.0
+offset_top = 473.0
+offset_right = 1362.0
+offset_bottom = 518.0
+text = "0"
+label_settings = SubResource("LabelSettings_6jd3s")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Submit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 756.0
+offset_top = 604.0
+offset_right = 851.0
+offset_bottom = 669.0
+theme_override_font_sizes/font_size = 25
+text = "Submit"
+
+[node name="GuessAgain" type="Button" parent="."]
+layout_mode = 0
+offset_left = 919.0
+offset_top = 603.0
+offset_right = 1075.0
+offset_bottom = 668.0
+theme_override_font_sizes/font_size = 25
+disabled = true
+text = "Guess Again"
+
+[node name="PlayAgain" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 818.0
+offset_top = 878.0
+offset_right = 974.0
+offset_bottom = 943.0
+theme_override_font_sizes/font_size = 25
+disabled = true
+text = "Play Again"
+
+[node name="Response" type="Label" parent="."]
+layout_mode = 2
+offset_left = 439.0
+offset_top = 700.0
+offset_right = 1360.0
+offset_bottom = 813.0
+label_settings = SubResource("LabelSettings_572ew")
+horizontal_alignment = 1
+
+[connection signal="text_changed" from="GuessHolder" to="." method="_on_guess_holder_text_changed"]
+[connection signal="pressed" from="Submit" to="." method="_on_submit_pressed"]
+[connection signal="pressed" from="GuessAgain" to="." method="_on_guess_again_pressed"]
+[connection signal="pressed" from="PlayAgain" to="." method="_on_play_again_pressed"]
